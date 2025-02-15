@@ -43,8 +43,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     public long userRegister(String userAccount, String userPassword, String checkPassword) {
         // 1. 参数校验
         ThrowUtils.throwIf(StrUtil.hasBlank(userAccount, userPassword, checkPassword), ErrorCode.PARAMS_ERROR, "参数不能为空");
-        ThrowUtils.throwIf(userAccount.length() < 6, ErrorCode.PARAMS_ERROR, "账号长度不能小于6位");
-        ThrowUtils.throwIf(userPassword.length() < 6, ErrorCode.PARAMS_ERROR, "密码长度不能小于6位");
+        ThrowUtils.throwIf(userAccount.length() < 8, ErrorCode.PARAMS_ERROR, "账号长度不能小于8位");
+        ThrowUtils.throwIf(userPassword.length() < 8, ErrorCode.PARAMS_ERROR, "密码长度不能小于8位");
         ThrowUtils.throwIf(!userPassword.equals(checkPassword), ErrorCode.PARAMS_ERROR, "两次密码不一致");
 
         // 2. 判断账号是否存在
