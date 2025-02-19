@@ -35,3 +35,11 @@ knife4j:
         api-rule-resources:
           - com.syb.ypic.controller
     version: 1.0.0
+
+#cos:
+#  client:
+#    host:
+#    secretId:
+#    secretKey:
+#    region:
+#    bucket:
