@@ -12,6 +12,10 @@ spring:
     url: jdbc:mysql://124.221.115.182:3306/cloud_photo
     username: syb
     password: .Ss13626350673
+  profiles:
+    active: local
+
+
 mybatis-plus:
   configuration:
     # MyBatis 配置
@@ -30,7 +34,7 @@ knife4j:
     title: 接口文档
     group:
       default:
-#        group-name: 默认分组
+        #        group-name: 默认分组
         api-rule: package
         api-rule-resources:
           - com.syb.ypic.controller
